@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Insert Inventory Item</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background-color: #ffffff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 500px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[readonly] {
+      background-color: #f1f1f1;
+      cursor: not-allowed;
+    }
+
+    .form-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-btn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Update Inventory Item</h2>
+    <form>
+      <div class="form-group">
+        <label>Item ID</label>
+        <input type="text" value="ITM1001" readonly>
+      </div>
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" placeholder="Enter item name">
+      </div>
+      <div class="form-group">
+        <label>Category</label>
+        <select>
+          <option value="">-- Select Category --</option>
+          <option>Burgers</option>
+          <option>Submarines</option>
+          <option>Fries</option>
+          <option>Chicken Pasta</option>
+          <option>Beverages</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Supplier</label>
+        <input type="text" placeholder="Enter supplier name">
+      </div>
+      <div class="form-group">
+        <label>Quantity Purchased</label>
+        <input type="number" placeholder="Qty purchased from supplier">
+      </div>
+      <div class="form-group">
+        <label>Reorder Point</label>
+        <input type="number" placeholder="Min stock before reorder">
+      </div>
+      <div class="form-group">
+        <label>Discount (%)</label>
+        <input type="number" placeholder="Discount in percentage">
+      </div>
+      <div class="form-group">
+        <label>Unit Price (Rs)</label>
+        <input type="number" placeholder="Price per unit">
+      </div>
+      <div class="form-group">
+        <label>Total Price</label>
+        <input type="number" value="0.00" readonly>
+      </div>
+      <div class="form-group">
+        <label>On-hand Status</label>
+        <select>
+          <option>Available</option>
+          <option>Low in Stock</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Item Status</label>
+        <input type="text" placeholder="e.g. Large, Medium, 330ml">
+      </div>
+
+      <button type="submit" class="form-btn">Add Item</button>
+    </form>
+  </div>
+
+</body>
+</html>
